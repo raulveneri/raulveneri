@@ -1,10 +1,10 @@
-# Hola! soy Raúl Veneri
+# Hi! I'm Raúl Veneri
 
-Me dedico al marketing digital aplicando IA y sistemas agénticos. Combino posicionamiento web, desarrollo y automatización para mejorar la visibilidad de los negocios midiendo qué funciona.
+I work in digital marketing using AI and agentic systems. I combine search optimization, web development, and automation to improve business visibility and measure what works.
 
-- **SEO y GEO:** posicionamiento en Google y visibilidad en buscadores con IA.
-- **SEM:** campañas de Google Ads con seguimiento de conversiones.
-- **Web y automatización:** desarrollo webs vibe codeadas.
-- **Agentes IA y sistemas agénticos:** creo agentes y sistemas autónomos específicos para SEO y SEM.
+- **SEO and GEO:** Google search rankings and visibility in AI-powered search.
+- **SEM:** Google Ads campaigns with conversion tracking.
+- **Web development and automation:** I build websites through vibe coding.
+- **AI agents and agentic systems:** I build specialized agents and autonomous systems for SEO and SEM.
 
-Comparto lo que voy montando y aprendiendo en [raulveneri.com](https://www.raulveneri.com/).
+I share what I'm building and learning at [raulveneri.com](https://www.raulveneri.com/).
