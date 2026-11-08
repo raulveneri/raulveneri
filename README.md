@@ -58,6 +58,8 @@ Language percentages use code size in owned public repositories, excluding forks
 
 Commits authored by me on each repository’s default branch during the last 30 UTC days. Updated daily.
 
+[Chart update status: ![Chart update status](https://github.com/raulveneri/raulveneri/actions/workflows/profile-charts.yml/badge.svg?branch=main)](https://github.com/raulveneri/raulveneri/actions/workflows/profile-charts.yml)
+
 <img src="assets/en/h-06.svg" alt="Tools" width="100%">
 
 <table>
@@ -67,3 +69,5 @@ Commits authored by me on each repository’s default branch during the last 30 
 <img src="assets/en/h-07.svg" alt="Contact" width="100%">
 
 <a href="https://www.raulveneri.com/"><img src="assets/en/contacto.svg" alt="Tell me about your website. Contact me at raulveneri.com." width="100%"></a>
+
+[Contact me](https://www.raulveneri.com/contacto/)

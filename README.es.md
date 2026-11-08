@@ -58,6 +58,8 @@ Los porcentajes reflejan el tamaño del código en repositorios públicos propio
 
 Commits de mi autoría en la rama predeterminada de cada repositorio durante los últimos 30 días UTC. Actualización diaria.
 
+[Estado de actualización de las gráficas: ![Estado de actualización de las gráficas](https://github.com/raulveneri/raulveneri/actions/workflows/profile-charts.yml/badge.svg?branch=main)](https://github.com/raulveneri/raulveneri/actions/workflows/profile-charts.yml)
+
 <img src="assets/es/h-06.svg" alt="Herramientas" width="100%">
 
 <table>
@@ -67,3 +69,5 @@ Commits de mi autoría en la rama predeterminada de cada repositorio durante los
 <img src="assets/es/h-07.svg" alt="Contacto" width="100%">
 
 <a href="https://www.raulveneri.com/"><img src="assets/es/contacto.svg" alt="Cuéntame sobre tu sitio web. Contáctame en raulveneri.com." width="100%"></a>
+
+[Contacta conmigo](https://www.raulveneri.com/contacto/)
