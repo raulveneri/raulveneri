@@ -3,7 +3,7 @@
 <p>
 <picture>
   <source media="(max-width: 600px)" srcset="assets/raulveneri-digital-laboratory--mobile.svg">
-  <img src="assets/raulveneri-digital-laboratory.svg" width="1200" height="400" alt="Mi laboratorio digital: marketing, código y agentes de inteligencia artificial.">
+  <img src="assets/raulveneri-digital-laboratory.svg" width="1200" alt="Mi laboratorio digital: marketing, código y agentes de inteligencia artificial.">
 </picture>
 </p>
 
@@ -19,7 +19,7 @@ Aquí comparto herramientas y proyectos propios. Mi web también es mi laborator
 <a href="https://github.com/raulveneri/seo-kit">
   <picture>
     <source media="(max-width: 600px)" srcset="assets/raulveneri-search-optimization-toolkit--mobile.svg">
-    <img src="assets/raulveneri-search-optimization-toolkit.svg" width="1200" height="420" loading="lazy" alt="SEO Kit: flujos de SEO y GEO con agentes IA. Analizar, decidir, construir y verificar. Abrir el repositorio público.">
+    <img src="assets/raulveneri-search-optimization-toolkit.svg" width="1200" loading="lazy" alt="SEO Kit: flujos de SEO y GEO con agentes IA. Analizar, decidir, construir y verificar. Abrir el repositorio público.">
   </picture>
 </a>
 </p>
@@ -45,7 +45,7 @@ Mi kit de flujos, agentes y herramientas para investigar, auditar y mejorar una 
 <p>
 <picture>
   <source media="(max-width: 600px)" srcset="assets/raulveneri-development-stack--mobile.svg">
-  <img src="assets/raulveneri-development-stack.svg" width="1200" height="264" loading="lazy" alt="Mi stack de desarrollo: Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
+  <img src="assets/raulveneri-development-stack.svg" width="1200" loading="lazy" alt="Mi stack de desarrollo: Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
 </picture>
 </p>
 

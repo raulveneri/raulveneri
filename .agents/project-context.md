@@ -12,4 +12,5 @@
 - Regenerate: `python3 .agents/scripts/generate_profile_assets.py`.
 - Validate: `python3 .agents/scripts/validate_profile.py`.
 - Animations settle within five seconds and honor reduced motion. Mobile artwork uses picture sources.
+- Do not set an HTML height on picture fallback images: GitHub otherwise preserves fixed height when width shrinks. Use each selected SVG's intrinsic width, height and viewBox ratio. Standalone cards retain both HTML dimensions.
 - Local previews and review evidence live under `audits/` and `proposals/`.

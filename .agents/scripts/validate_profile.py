@@ -15,15 +15,25 @@ class ProfileHTML(HTMLParser):
         self.images = []
         self.sources = []
         self.links = []
+        self.in_picture = False
+        self.responsive_images = set()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "picture":
+            self.in_picture = True
         if tag == "img":
             self.images.append(attrs)
+            if self.in_picture:
+                self.responsive_images.add(attrs["src"])
         if tag == "source":
             self.sources.append(attrs)
         if tag == "a":
             self.links.append(attrs["href"])
+
+    def handle_endtag(self, tag):
+        if tag == "picture":
+            self.in_picture = False
 
 
 def luminance(hex_color):
@@ -46,7 +56,13 @@ def main():
     assert all(b <= a+1 for a, b in zip(levels, levels[1:])), "Skipped heading level"
     for img in parser.images:
         assert img.get("alt", "").strip(), "Missing alt text"
-        assert int(img["width"]) > 0 and int(img["height"]) > 0, "Missing dimensions"
+        assert int(img["width"]) > 0, "Missing image width"
+        if img["src"] in parser.responsive_images:
+            # GitHub leaves height fixed inside picture, even when width shrinks.
+            # Use the selected SVG's intrinsic ratio for art-directed sources.
+            assert "height" not in img, "Fixed height breaks GitHub art direction"
+        else:
+            assert int(img["height"]) > 0, "Missing fixed-card dimensions"
     sources = [img["src"] for img in parser.images] + [s["srcset"] for s in parser.sources]
     files = sorted((ROOT / "assets").glob("*.svg"))
     assert {str(p.relative_to(ROOT)) for p in files} == set(sources), "Unused or missing artwork"
@@ -54,6 +70,7 @@ def main():
     for path in files:
         source = path.read_text()
         root = ET.fromstring(source)
+        assert root.get("viewBox") and int(root.get("width")) > 0 and int(root.get("height")) > 0, "Missing intrinsic SVG ratio"
         assert root.get("role") == "img"
         ids = [e.get("id") for e in root.iter() if e.get("id")]
         assert len(ids) == len(set(ids)), f"Duplicate ID in {path.name}"
@@ -81,7 +98,7 @@ def main():
     assert minimum >= 4.5, f"Text contrast {minimum:.2f}:1"
     print(f"PASS: {len(files)} SVGs, {len(parser.images)} image embeds, {len(parser.sources)} mobile sources, {len(links)} public link targets")
     print(f"PASS: {sum(p.stat().st_size for p in files):,} artwork bytes; minimum checked text contrast {minimum:.2f}:1")
-    print("PASS: SVG safety, accessible names, dimensions, finite motion, local assets, headings and Voice Kit copy floor")
+    print("PASS: SVG safety, accessible names, intrinsic ratios, finite motion, local assets, headings and Voice Kit copy floor")
     print("External link responses and browser rendering require separate verification.")
 
 
