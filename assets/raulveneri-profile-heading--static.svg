@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="raulveneri-profile_heading__static_title raulveneri-profile_heading__static_description">
+<title id="raulveneri-profile_heading__static_title">Marketing, código y agentes de IA.</title>
+<desc id="raulveneri-profile_heading__static_description">Marketing, código y agentes de IA. Versión estática.</desc>
+<defs></defs>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+.raulveneri-serif { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+.raulveneri-monospace { font-family: 'DejaVu Sans Mono', Consolas, monospace; }
+.raulveneri-demo_stage { opacity: 0; }
+.raulveneri-demo_stage--decision { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+<rect width="1200" height="360" rx="0" fill="#f5f2ec"/>
+<text x="52" y="127" font-size="91" fill="#242321" font-weight="700" letter-spacing="-2">Marketing, código</text><text x="52" y="237" font-size="100" fill="#242321" font-weight="400" class="raulveneri-serif">y agentes de IA.</text><path class="raulveneri-heading_underline" d="M52 271H1098" stroke="#ad3d28" stroke-width="4"/><text x="52" y="328" font-size="22" fill="#615c55" font-weight="400" letter-spacing="1">SEO / GOOGLE ADS / AUTOMATIZACIÓN</text>
+</svg>

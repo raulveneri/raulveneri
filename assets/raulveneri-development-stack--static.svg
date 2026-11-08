@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="264" viewBox="0 0 1200 264" role="img" aria-labelledby="raulveneri-development_stack__static_title raulveneri-development_stack__static_description">
+<title id="raulveneri-development_stack__static_title">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio.</title>
+<desc id="raulveneri-development_stack__static_description">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio. Versión estática.</desc>
+<defs></defs>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+.raulveneri-serif { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+.raulveneri-monospace { font-family: 'DejaVu Sans Mono', Consolas, monospace; }
+.raulveneri-demo_stage { opacity: 0; }
+.raulveneri-demo_stage--decision { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+<rect width="1200" height="264" rx="16" fill="#151b24"/>
+<rect x="24" y="26" width="368" height="100" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--python"><g transform="translate(78 76) scale(0.85)" fill="#ffd28a"><path d="M-17 3V-15Q-17-24-7-24H9Q20-24 20-14V-3H-5Q-15-3-15 8V21H-22Q-32 21-32 10V3Z"/><path d="M17-3V15Q17 24 7 24H-9Q-20 24-20 14V3H5Q15 3 15-8V-21H22Q32-21 32-10V-3Z" opacity=".6"/></g></g><text x="129" y="86" font-size="28" fill="#f1f5f9" font-weight="600" >Python</text><rect x="416" y="26" width="368" height="100" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--javascript"><g transform="translate(470 76) scale(0.85)" fill="#f3df75"><rect x="-28" y="-28" width="56" height="56" rx="7"/><text x="-20" y="16" font-size="30" fill="#0b1422" font-weight="700" >JS</text></g></g><text x="521" y="86" font-size="28" fill="#f1f5f9" font-weight="600" >JavaScript</text><rect x="808" y="26" width="368" height="100" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--typescript"><g transform="translate(862 76) scale(0.85)" fill="#83baff"><rect x="-28" y="-28" width="56" height="56" rx="7"/><text x="-22" y="16" font-size="30" fill="#0b1422" font-weight="700" >TS</text></g></g><text x="913" y="86" font-size="28" fill="#f1f5f9" font-weight="600" >TypeScript</text><rect x="24" y="148" width="368" height="100" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--astro"><g transform="translate(78 198) scale(0.85)" fill="#f8a8d3"><path d="M-27 21L-9-26H9L27 21 12 15 0-13-12 15Z"/><path d="M-10 25Q0 40 10 25Q0 28-10 25" fill="#ffd28a"/></g></g><text x="129" y="208" font-size="28" fill="#f1f5f9" font-weight="600" >Astro</text><rect x="416" y="148" width="368" height="100" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--tailwind"><g transform="translate(470 198) scale(0.85)" fill="#72ede2"><path d="M-32-1Q-22-25-3-12T32-13Q22 12 3-1T-32-1M-32 17Q-22-7-3 6T32 5Q22 30 3 17T-32 17"/></g></g><text x="521" y="208" font-size="28" fill="#f1f5f9" font-weight="600" >Tailwind CSS</text><rect x="808" y="148" width="368" height="100" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--cloudflare"><g transform="translate(862 198) scale(0.85)" fill="#ffbc79"><path d="M-31 16H32Q41 5 29-4Q29-24 9-24-9-24-12-8-31-14-34 3-45 7-37 16Z"/></g></g><text x="913" y="208" font-size="28" fill="#f1f5f9" font-weight="600" >Cloudflare</text>
+</svg>

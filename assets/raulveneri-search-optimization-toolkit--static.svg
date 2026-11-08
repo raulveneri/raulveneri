@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="raulveneri-search_optimization_toolkit__static_title raulveneri-search_optimization_toolkit__static_description">
+<title id="raulveneri-search_optimization_toolkit__static_title">SEO Kit: analiza tu web, entiende qué falla y decide qué cambiar. Demostración adaptada del ejemplo documentado.</title>
+<desc id="raulveneri-search_optimization_toolkit__static_description">SEO Kit: analiza tu web, entiende qué falla y decide qué cambiar. Demostración adaptada del ejemplo documentado. Versión estática.</desc>
+<defs></defs>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+.raulveneri-serif { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+.raulveneri-monospace { font-family: 'DejaVu Sans Mono', Consolas, monospace; }
+.raulveneri-demo_stage { opacity: 0; }
+.raulveneri-demo_stage--decision { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+<rect width="1200" height="560" rx="0" fill="#f5f2ec"/>
+<text x="52" y="120" font-size="94" fill="#242321" font-weight="700" letter-spacing="-3">SEO Kit</text><text x="52" y="213" font-size="40" fill="#242321" font-weight="400" >Analiza tu web.</text><text x="52" y="271" font-size="40" fill="#242321" font-weight="400" >Entiende qué falla.</text><text x="52" y="329" font-size="40" fill="#ad3d28" font-weight="600" >Decide qué cambiar.</text><path d="M604 52V444" stroke="#c9c2b8"/><text x="650" y="90" font-size="17" fill="#615c55" font-weight="400" >EJEMPLO DOCUMENTADO · WEB LOCAL</text><g class="raulveneri-demo_stage raulveneri-demo_stage--request"><text x="650" y="154" font-size="19" fill="#ad3d28" font-weight="600" >01 / LA PETICIÓN</text><text x="650" y="218" font-size="30" fill="#242321" font-weight="600" >Auditar dos páginas.</text><text x="650" y="265" font-size="30" fill="#242321" font-weight="600" >Revisar técnica y contenido.</text><text x="650" y="330" font-size="24" fill="#615c55" font-weight="400" >Análisis de HTML compilado.</text><text x="650" y="367" font-size="24" fill="#615c55" font-weight="400" >Sin modificar la web.</text></g><g class="raulveneri-demo_stage raulveneri-demo_stage--finding"><text x="650" y="154" font-size="19" fill="#ad3d28" font-weight="600" >02 / EL HALLAZGO</text><text x="650" y="218" font-size="30" fill="#242321" font-weight="600" >Un enlace está roto.</text><text x="650" y="265" font-size="30" fill="#242321" font-weight="600" >/about/ → /missing/</text><text x="650" y="330" font-size="24" fill="#615c55" font-weight="400" >La página de destino no existe.</text><text x="650" y="367" font-size="24" fill="#615c55" font-weight="400" >El informe indica dónde ocurre.</text></g><g class="raulveneri-demo_stage raulveneri-demo_stage--decision"><text x="650" y="154" font-size="19" fill="#ad3d28" font-weight="600" >03 / QUÉ HACER</text><text x="650" y="218" font-size="30" fill="#242321" font-weight="600" >Corregir el enlace</text><text x="650" y="265" font-size="30" fill="#242321" font-weight="600" >o recuperar la página.</text><text x="650" y="330" font-size="24" fill="#615c55" font-weight="400" >La opción depende del proyecto.</text><text x="650" y="367" font-size="24" fill="#615c55" font-weight="400" >Tú decides qué tiene sentido.</text></g><text x="52" y="483" font-size="24" fill="#615c55" font-weight="400" >Claude Code · Codex · OpenCode</text><text x="52" y="528" font-size="26" fill="#ad3d28" font-weight="600" >Quiero ver SEO Kit ↗</text>
+</svg>

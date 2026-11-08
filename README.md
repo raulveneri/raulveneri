@@ -1,65 +1,116 @@
 # Raúl Veneri
 
-<p>
+<details open>
+<summary>Marketing, código y agentes de IA</summary>
+
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/raulveneri-digital-laboratory--mobile.svg">
-  <img src="assets/raulveneri-digital-laboratory.svg" width="1200" alt="Mi laboratorio digital: marketing, código y agentes de inteligencia artificial.">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-profile-heading--mobile--static.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-profile-heading--static.svg">
+  <source media="(max-width: 1023px)" srcset="assets/raulveneri-profile-heading--mobile.svg">
+  <img src="assets/raulveneri-profile-heading.svg" width="1200" alt="Marketing, código y agentes de IA.">
 </picture>
-</p>
 
-Construyo webs y sistemas con agentes de inteligencia artificial para trabajar el **SEO, la visibilidad en buscadores con IA y Google Ads**. Vengo de la parte técnica: monto el sistema, reviso lo que hace e itero con datos.
+</details>
 
-Aquí comparto herramientas y proyectos propios. Mi web también es mi laboratorio: lo que aprendo construyendo, lo explico paso a paso.
+Trabajo con **SEO, Google Ads y automatización**. Desarrollo herramientas que utilizo en mis proyectos y comparto cómo trabajo con ellas, paso a paso.
 
 [Mi web](https://www.raulveneri.com/) · [Mis guías](https://www.raulveneri.com/guias/) · [Mis repositorios públicos](https://github.com/raulveneri?tab=repositories&type=source) · [Quiero hablar de mi proyecto](https://www.raulveneri.com/contacto/)
 
-## Lo que estoy construyendo
+## SEO Kit
 
-<p>
+**Mi herramienta de SEO. La uso en mi día a día y la voy actualizando.**
+
+Con SEO Kit puedes analizar una web, detectar problemas técnicos y de contenido, entender qué está pasando y decidir qué mejorar. Funciona con **Claude Code, Codex y OpenCode**.
+
+Si estás empezando, te guía y explica los hallazgos. Si ya tienes experiencia, puedes profundizar en el análisis, incorporar tus datos y contrastar propuestas.
+
+Cuando una decisión necesita contexto o criterio humano, te presenta opciones y sus implicaciones. Tú decides por dónde seguir. Después, te ayuda a aplicar los cambios y comprobar el resultado. Si faltan datos para concluir algo, lo deja indicado.
+
+<details open>
+<summary>SEO Kit en acción</summary>
+
 <a href="https://github.com/raulveneri/seo-kit">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/raulveneri-search-optimization-toolkit--mobile.svg">
-    <img src="assets/raulveneri-search-optimization-toolkit.svg" width="1200" loading="lazy" alt="SEO Kit: flujos de SEO y GEO con agentes IA. Analizar, decidir, construir y verificar. Abrir el repositorio público.">
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-search-optimization-toolkit--mobile--static.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-search-optimization-toolkit--static.svg">
+    <source media="(max-width: 1023px)" srcset="assets/raulveneri-search-optimization-toolkit--mobile.svg">
+    <img src="assets/raulveneri-search-optimization-toolkit.svg" width="1200" alt="SEO Kit: analiza tu web, entiende qué falla y decide qué cambiar. Ejemplo de auditoría local con un enlace roto. Abrir el repositorio.">
   </picture>
 </a>
-</p>
 
-### SEO Kit
+La animación adapta el [ejemplo documentado de SEO Kit](https://github.com/raulveneri/seo-kit#ask-codex-for-an-audit): una auditoría de dos páginas locales detecta un enlace roto. Corregir el enlace o recuperar la página son alternativas que dependen del proyecto.
 
-Mi kit de flujos, agentes y herramientas para investigar, auditar y mejorar una web. Incluye SEO y GEO, es decir, posicionamiento en buscadores y visibilidad en sus respuestas con IA. Se puede usar con **Claude Code, Codex y OpenCode**.
+</details>
 
-[Repositorio de SEO Kit](https://github.com/raulveneri/seo-kit) · [Guía para empezar](https://github.com/raulveneri/seo-kit/blob/main/docs/GETTING_STARTED.md)
+[Quiero ver SEO Kit](https://github.com/raulveneri/seo-kit) · [Quiero empezar paso a paso](https://github.com/raulveneri/seo-kit/blob/main/docs/GETTING_STARTED.md)
 
-<p>
-  <a href="https://www.raulveneri.com/"><img src="assets/raulveneri-personal-website.svg" width="405" height="300" loading="lazy" alt="Raúl Veneri: mi web de marketing con IA, posicionamiento y automatización. Abrir la web."></a>
-  <a href="https://www.roboticzlab.com/es/"><img src="assets/raulveneri-robotics-publication.svg" width="405" height="300" loading="lazy" alt="Roboticz Lab: robótica con IA, noticias con fuentes y guías para montar proyectos en casa. Abrir la web."></a>
-</p>
+## Lo que voy aprendiendo, lo explico aquí
 
-### Mi web y Roboticz Lab
+En [raulveneri.com](https://www.raulveneri.com/) comparto guías sobre agentes, SEO y herramientas que uso. Cuento cómo monto las cosas, dónde me atasco y qué cambio para que funcionen.
 
-- **[raulveneri.com](https://www.raulveneri.com/):** mi web de marketing con IA. La migré de WordPress a Astro y comparto guías sobre las herramientas y procesos que uso.
-- **[Roboticz Lab](https://www.roboticzlab.com/es/):** mi proyecto de robótica con IA. Noticias con fuentes y guías para entender qué conectar, cómo montarlo y por qué funciona.
+<details open>
+<summary>Un vistazo a mi web</summary>
+
+<a href="https://www.raulveneri.com/guias/">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-personal-website--mobile--static.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-personal-website--static.svg">
+    <source media="(max-width: 1023px)" srcset="assets/raulveneri-personal-website--mobile.svg">
+    <img src="assets/raulveneri-personal-website.svg" width="1200" alt="Captura real de mi guía Google Analytics en Claude Code, en raulveneri.com. Abrir mis guías.">
+  </picture>
+</a>
+
+</details>
+
+[Quiero leer las guías](https://www.raulveneri.com/guias/) · [Quiero conocer tu trabajo](https://www.raulveneri.com/)
 
 ## Con qué lo construyo
 
-<p>
+<details open>
+<summary>Las herramientas que uso</summary>
+
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/raulveneri-development-stack--mobile.svg">
-  <img src="assets/raulveneri-development-stack.svg" width="1200" loading="lazy" alt="Mi stack de desarrollo: Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-development-stack--mobile--static.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-development-stack--static.svg">
+  <source media="(max-width: 1023px)" srcset="assets/raulveneri-development-stack--mobile.svg">
+  <img src="assets/raulveneri-development-stack.svg" width="1200" alt="Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
 </picture>
-</p>
+
+</details>
 
 **Python · JavaScript · TypeScript · Astro · Tailwind CSS · Cloudflare**
 
-Trabajo con **Claude Code, Codex y OpenCode** para repartir tareas, dar contexto a los agentes y revisar sus resultados. Uso Git y GitHub para mantener los cambios y comprobar qué se ha hecho.
+Trabajo con **Claude Code, Codex y OpenCode** para dar contexto a los agentes, repartir tareas y revisar sus resultados. Uso Git y GitHub para mantener los cambios y comprobar qué se ha hecho.
 
-## Cómo trabajo
+Puedes cerrar cada bloque desde su título para ocultar el movimiento. Si prefieres, aquí tienes las imágenes estáticas.
 
-1. **Entiendo el problema.** Reviso qué hay, qué falta y qué merece la pena construir.
-2. **Monto el sistema.** Doy contexto y tareas concretas a los agentes.
-3. **Compruebo el resultado.** Reviso cambios, ejecuto las comprobaciones e itero cuando algo falla.
-4. **Comparto lo aprendido.** Lo convierto en herramientas y guías que se puedan seguir.
+<details>
+<summary>Ver las imágenes sin animación</summary>
 
-Si estás empezando, puedes entrar por [mis guías de IA y herramientas](https://www.raulveneri.com/guias/). Explico cómo lo trabajo, paso a paso.
+<picture>
+  <source media="(max-width: 1023px)" srcset="assets/raulveneri-profile-heading--mobile--static.svg">
+  <img src="assets/raulveneri-profile-heading--static.svg" width="1200" alt="Presentación estática: marketing, código y agentes de IA.">
+</picture>
+
+<a href="https://github.com/raulveneri/seo-kit">
+  <picture>
+    <source media="(max-width: 1023px)" srcset="assets/raulveneri-search-optimization-toolkit--mobile--static.svg">
+    <img src="assets/raulveneri-search-optimization-toolkit--static.svg" width="1200" alt="SEO Kit, versión estática: analiza tu web, entiende qué falla y decide qué cambiar.">
+  </picture>
+</a>
+
+<a href="https://www.raulveneri.com/guias/">
+  <picture>
+    <source media="(max-width: 1023px)" srcset="assets/raulveneri-personal-website--mobile--static.svg">
+    <img src="assets/raulveneri-personal-website--static.svg" width="1200" alt="Captura estática de mi guía Google Analytics en Claude Code.">
+  </picture>
+</a>
+
+<picture>
+  <source media="(max-width: 1023px)" srcset="assets/raulveneri-development-stack--mobile--static.svg">
+  <img src="assets/raulveneri-development-stack--static.svg" width="1200" alt="Stack sin movimiento: Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
+</picture>
+
+</details>
 
 **[Quiero hablar de mi proyecto](https://www.raulveneri.com/contacto/)**

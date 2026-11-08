@@ -1,19 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="raulveneri-development_stack__mobile_title raulveneri-development_stack__mobile_description">
-<title id="raulveneri-development_stack__mobile_title">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.</title>
-<desc id="raulveneri-development_stack__mobile_description">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Ilustración original. Las animaciones terminan antes de cinco segundos.</desc>
-<defs>
- <linearGradient id="raulveneri-development_stack__mobile_background" x2="1" y2="1"><stop stop-color="#101e30"/><stop offset="1" stop-color="#080f1b"/></linearGradient>
- <pattern id="raulveneri-development_stack__mobile_grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#23364d" stroke-opacity=".45"/></pattern>
-</defs>
+<title id="raulveneri-development_stack__mobile_title">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio.</title>
+<desc id="raulveneri-development_stack__mobile_description">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio. Animación con pausas de lectura. Respeta la preferencia de movimiento reducido.</desc>
+<defs></defs>
 <style>
- text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
- .raulveneri-circuit_trace { stroke-dasharray: 12 16; animation: raulveneri-flow 4.6s ease-out 1; }
- .raulveneri-panel_reveal { animation: raulveneri-reveal 1s ease-out 1 backwards; }
- @keyframes raulveneri-flow { from {stroke-dashoffset: 224;} to {stroke-dashoffset: 0;} }
- @keyframes raulveneri-reveal { from {transform: translateY(7px);} to {transform: translateY(0);} }
- @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+.raulveneri-serif { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+.raulveneri-monospace { font-family: 'DejaVu Sans Mono', Consolas, monospace; }
+.raulveneri-demo_stage { opacity: 0; }
+.raulveneri-demo_stage--decision { opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+ .raulveneri-heading_underline { animation: raulveneri-underline 12s ease-in-out infinite; transform-origin: 52px 0; }
+ .raulveneri-demo_stage--request { animation: raulveneri-request 12s linear infinite; }
+ .raulveneri-demo_stage--finding { animation: raulveneri-finding 12s linear infinite; }
+ .raulveneri-demo_stage--decision { animation: raulveneri-decision 12s linear infinite; }
+ .raulveneri-guide_scroll { animation: raulveneri-scroll 14s ease-in-out infinite; }
+ .raulveneri-stack_gesture { transform-box: fill-box; transform-origin: center; }
+ .raulveneri-stack_gesture--python { animation: raulveneri-orbit 12s ease-in-out infinite; }
+ .raulveneri-stack_gesture--javascript { animation: raulveneri-code 12s ease-in-out 2s infinite; }
+ .raulveneri-stack_gesture--typescript { animation: raulveneri-code 12s ease-in-out 4s infinite; }
+ .raulveneri-stack_gesture--astro { animation: raulveneri-lift 12s ease-in-out 6s infinite; }
+ .raulveneri-stack_gesture--tailwind { animation: raulveneri-wave 12s ease-in-out 8s infinite; }
+ .raulveneri-stack_gesture--cloudflare { animation: raulveneri-arrive 12s ease-in-out 10s infinite; }
+}
+@keyframes raulveneri-underline { 0%, 8%, 100% { transform: scaleX(.3); } 24%, 82% { transform: scaleX(1); } }
+@keyframes raulveneri-request { 0%, 30% { opacity: 1; } 33%, 96% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes raulveneri-finding { 0%, 30%, 66%, 100% { opacity: 0; } 33%, 63% { opacity: 1; } }
+@keyframes raulveneri-decision { 0%, 63%, 100% { opacity: 0; } 66%, 96% { opacity: 1; } }
+@keyframes raulveneri-scroll { 0%, 18%, 100% { transform: translateY(0); } 55%, 82% { transform: translateY(-280px); } }
+@keyframes raulveneri-orbit { 0%, 3%, 20%, 100% { transform: rotate(0); } 9% { transform: rotate(-12deg); } 14% { transform: rotate(8deg); } }
+@keyframes raulveneri-code { 0%, 3%, 20%, 100% { transform: translateX(0); } 9% { transform: translateX(-5px); } 14% { transform: translateX(5px); } }
+@keyframes raulveneri-lift { 0%, 3%, 20%, 100% { transform: translateY(0); } 10%, 14% { transform: translateY(-9px); } }
+@keyframes raulveneri-wave { 0%, 3%, 20%, 100% { transform: skewX(0); } 9% { transform: skewX(-12deg); } 14% { transform: skewX(9deg); } }
+@keyframes raulveneri-arrive { 0%, 3%, 20%, 100% { transform: translateX(0); } 9% { transform: translateX(-7px); } 14% { transform: translateX(3px); } }
+
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
 </style>
-<rect x="1" y="1" width="638" height="478" rx="24" fill="url(#raulveneri-development_stack__mobile_background)" stroke="#344b65"/>
-<rect x="2" y="2" width="636" height="476" rx="23" fill="url(#raulveneri-development_stack__mobile_grid)"/>
-<g class="raulveneri-panel_reveal" style="animation-delay:0.0s"><rect x="26" y="26" width="282" height="128" rx="16" fill="#102034" stroke="#58748f"/><g transform="translate(167.0 66) scale(0.7)" fill="#ffd28a"><path d="M-17 3V-15Q-17-24-7-24H9Q20-24 20-14V-3H-5Q-15-3-15 8V21H-22Q-32 21-32 10V3Z"/><path d="M17-3V15Q17 24 7 24H-9Q-20 24-20 14V3H5Q15 3 15-8V-21H22Q32-21 32-10V-3Z" opacity=".6"/></g><text x="167.0" y="124" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">Python</text><path class="raulveneri-circuit_trace" d="M44 154H290" fill="none" stroke="#ffd28a" stroke-width="2"/></g><g class="raulveneri-panel_reveal" style="animation-delay:0.12s"><rect x="332" y="26" width="282" height="128" rx="16" fill="#102034" stroke="#58748f"/><g transform="translate(473.0 66) scale(0.7)" fill="#f3df75"><rect x="-28" y="-28" width="56" height="56" rx="7"/><text x="-20" y="16" font-size="30" fill="#0b1422" font-weight="700" >JS</text></g><text x="473.0" y="124" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">JavaScript</text><path class="raulveneri-circuit_trace" d="M350 154H596" fill="none" stroke="#f3df75" stroke-width="2"/></g><g class="raulveneri-panel_reveal" style="animation-delay:0.24s"><rect x="26" y="176" width="282" height="128" rx="16" fill="#102034" stroke="#58748f"/><g transform="translate(167.0 216) scale(0.7)" fill="#83baff"><rect x="-28" y="-28" width="56" height="56" rx="7"/><text x="-22" y="16" font-size="30" fill="#0b1422" font-weight="700" >TS</text></g><text x="167.0" y="274" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">TypeScript</text><path class="raulveneri-circuit_trace" d="M44 304H290" fill="none" stroke="#83baff" stroke-width="2"/></g><g class="raulveneri-panel_reveal" style="animation-delay:0.36s"><rect x="332" y="176" width="282" height="128" rx="16" fill="#102034" stroke="#58748f"/><g transform="translate(473.0 216) scale(0.7)" fill="#f8a8d3"><path d="M-27 21L-9-26H9L27 21 12 15 0-13-12 15Z"/><path d="M-10 25Q0 40 10 25Q0 28-10 25" fill="#ffd28a"/></g><text x="473.0" y="274" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">Astro</text><path class="raulveneri-circuit_trace" d="M350 304H596" fill="none" stroke="#f8a8d3" stroke-width="2"/></g><g class="raulveneri-panel_reveal" style="animation-delay:0.48s"><rect x="26" y="326" width="282" height="128" rx="16" fill="#102034" stroke="#58748f"/><g transform="translate(167.0 366) scale(0.7)" fill="#72ede2"><path d="M-32-1Q-22-25-3-12T32-13Q22 12 3-1T-32-1M-32 17Q-22-7-3 6T32 5Q22 30 3 17T-32 17"/></g><text x="167.0" y="424" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">Tailwind CSS</text><path class="raulveneri-circuit_trace" d="M44 454H290" fill="none" stroke="#72ede2" stroke-width="2"/></g><g class="raulveneri-panel_reveal" style="animation-delay:0.6s"><rect x="332" y="326" width="282" height="128" rx="16" fill="#102034" stroke="#58748f"/><g transform="translate(473.0 366) scale(0.7)" fill="#ffbc79"><path d="M-31 16H32Q41 5 29-4Q29-24 9-24-9-24-12-8-31-14-34 3-45 7-37 16Z"/></g><text x="473.0" y="424" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">Cloudflare</text><path class="raulveneri-circuit_trace" d="M350 454H596" fill="none" stroke="#ffbc79" stroke-width="2"/></g>
+<rect width="640" height="480" rx="16" fill="#151b24"/>
+<rect x="26" y="26" width="282" height="128" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--python"><g transform="translate(167.0 66) scale(0.7)" fill="#ffd28a"><path d="M-17 3V-15Q-17-24-7-24H9Q20-24 20-14V-3H-5Q-15-3-15 8V21H-22Q-32 21-32 10V3Z"/><path d="M17-3V15Q17 24 7 24H-9Q-20 24-20 14V3H5Q15 3 15-8V-21H22Q32-21 32-10V-3Z" opacity=".6"/></g></g><text x="167.0" y="124" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">Python</text><rect x="332" y="26" width="282" height="128" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--javascript"><g transform="translate(473.0 66) scale(0.7)" fill="#f3df75"><rect x="-28" y="-28" width="56" height="56" rx="7"/><text x="-20" y="16" font-size="30" fill="#0b1422" font-weight="700" >JS</text></g></g><text x="473.0" y="124" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">JavaScript</text><rect x="26" y="176" width="282" height="128" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--typescript"><g transform="translate(167.0 216) scale(0.7)" fill="#83baff"><rect x="-28" y="-28" width="56" height="56" rx="7"/><text x="-22" y="16" font-size="30" fill="#0b1422" font-weight="700" >TS</text></g></g><text x="167.0" y="274" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">TypeScript</text><rect x="332" y="176" width="282" height="128" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--astro"><g transform="translate(473.0 216) scale(0.7)" fill="#f8a8d3"><path d="M-27 21L-9-26H9L27 21 12 15 0-13-12 15Z"/><path d="M-10 25Q0 40 10 25Q0 28-10 25" fill="#ffd28a"/></g></g><text x="473.0" y="274" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">Astro</text><rect x="26" y="326" width="282" height="128" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--tailwind"><g transform="translate(167.0 366) scale(0.7)" fill="#72ede2"><path d="M-32-1Q-22-25-3-12T32-13Q22 12 3-1T-32-1M-32 17Q-22-7-3 6T32 5Q22 30 3 17T-32 17"/></g></g><text x="167.0" y="424" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">Tailwind CSS</text><rect x="332" y="326" width="282" height="128" rx="12" fill="#1d2838" stroke="#496078"/><g class="raulveneri-stack_gesture raulveneri-stack_gesture--cloudflare"><g transform="translate(473.0 366) scale(0.7)" fill="#ffbc79"><path d="M-31 16H32Q41 5 29-4Q29-24 9-24-9-24-12-8-31-14-34 3-45 7-37 16Z"/></g></g><text x="473.0" y="424" font-size="30" fill="#f1f5f9" font-weight="600" text-anchor="middle">Cloudflare</text>
 </svg>

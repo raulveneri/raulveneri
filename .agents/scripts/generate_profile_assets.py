@@ -1,97 +1,138 @@
 #!/usr/bin/env python3
-"""Original SVG artwork for the profile. Python standard library only."""
+"""Generate the owner's editorial profile artwork, without third-party packages."""
+from base64 import b64encode
 from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-ASSETS = ROOT / "assets"
-INK, MUTED, CYAN, AMBER = "#f1f5f9", "#b7c8d9", "#72ede2", "#ffd28a"
+ASSETS = ROOT / 'assets'
+INK, MUTED, ACCENT, PAPER = '#242321', '#615c55', '#ad3d28', '#f5f2ec'
+CYAN, AMBER = '#72ede2', '#ffd28a'
 
 
-def text(x, y, value, size=24, color=INK, weight=400, extra=""):
+def text(x, y, value, size=24, color=INK, weight=400, extra=''):
     return f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}" font-weight="{weight}" {extra}>{escape(value)}</text>'
 
 
-def document(name, width, height, title, body, inset=1):
-    prefix = "raulveneri-" + name.replace("-", "_")
+BASE = '''
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+.raulveneri-serif { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+.raulveneri-monospace { font-family: 'DejaVu Sans Mono', Consolas, monospace; }
+.raulveneri-demo_stage { opacity: 0; }
+.raulveneri-demo_stage--decision { opacity: 1; }
+'''
+MOTION = '''
+@media (prefers-reduced-motion: no-preference) {
+ .raulveneri-heading_underline { animation: raulveneri-underline 12s ease-in-out infinite; transform-origin: 52px 0; }
+ .raulveneri-demo_stage--request { animation: raulveneri-request 12s linear infinite; }
+ .raulveneri-demo_stage--finding { animation: raulveneri-finding 12s linear infinite; }
+ .raulveneri-demo_stage--decision { animation: raulveneri-decision 12s linear infinite; }
+ .raulveneri-guide_scroll { animation: raulveneri-scroll 14s ease-in-out infinite; }
+ .raulveneri-stack_gesture { transform-box: fill-box; transform-origin: center; }
+ .raulveneri-stack_gesture--python { animation: raulveneri-orbit 12s ease-in-out infinite; }
+ .raulveneri-stack_gesture--javascript { animation: raulveneri-code 12s ease-in-out 2s infinite; }
+ .raulveneri-stack_gesture--typescript { animation: raulveneri-code 12s ease-in-out 4s infinite; }
+ .raulveneri-stack_gesture--astro { animation: raulveneri-lift 12s ease-in-out 6s infinite; }
+ .raulveneri-stack_gesture--tailwind { animation: raulveneri-wave 12s ease-in-out 8s infinite; }
+ .raulveneri-stack_gesture--cloudflare { animation: raulveneri-arrive 12s ease-in-out 10s infinite; }
+}
+@keyframes raulveneri-underline { 0%, 8%, 100% { transform: scaleX(.3); } 24%, 82% { transform: scaleX(1); } }
+@keyframes raulveneri-request { 0%, 30% { opacity: 1; } 33%, 96% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes raulveneri-finding { 0%, 30%, 66%, 100% { opacity: 0; } 33%, 63% { opacity: 1; } }
+@keyframes raulveneri-decision { 0%, 63%, 100% { opacity: 0; } 66%, 96% { opacity: 1; } }
+@keyframes raulveneri-scroll { 0%, 18%, 100% { transform: translateY(0); } 55%, 82% { transform: translateY(-280px); } }
+@keyframes raulveneri-orbit { 0%, 3%, 20%, 100% { transform: rotate(0); } 9% { transform: rotate(-12deg); } 14% { transform: rotate(8deg); } }
+@keyframes raulveneri-code { 0%, 3%, 20%, 100% { transform: translateX(0); } 9% { transform: translateX(-5px); } 14% { transform: translateX(5px); } }
+@keyframes raulveneri-lift { 0%, 3%, 20%, 100% { transform: translateY(0); } 10%, 14% { transform: translateY(-9px); } }
+@keyframes raulveneri-wave { 0%, 3%, 20%, 100% { transform: skewX(0); } 9% { transform: skewX(-12deg); } 14% { transform: skewX(9deg); } }
+@keyframes raulveneri-arrive { 0%, 3%, 20%, 100% { transform: translateX(0); } 9% { transform: translateX(-7px); } 14% { transform: translateX(3px); } }
+'''
+REDUCED = '''
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+'''
+
+
+def document(name, width, height, title, body, mobile=False, static=False, dark=False, defs=''):
+    suffix = ('--mobile' if mobile else '') + ('--static' if static else '')
+    prefix = 'raulveneri-' + name.replace('-', '_') + suffix.replace('-', '_')
+    bg = '#151b24' if dark else PAPER
+    description = 'Versión estática.' if static else 'Animación con pausas de lectura. Respeta la preferencia de movimiento reducido.'
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="{prefix}_title {prefix}_description">
 <title id="{prefix}_title">{escape(title)}</title>
-<desc id="{prefix}_description">{escape(title)} Ilustración original. Las animaciones terminan antes de cinco segundos.</desc>
-<defs>
- <linearGradient id="{prefix}_background" x2="1" y2="1"><stop stop-color="#101e30"/><stop offset="1" stop-color="#080f1b"/></linearGradient>
- <pattern id="{prefix}_grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#23364d" stroke-opacity=".45"/></pattern>
-</defs>
-<style>
- text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }}
- .raulveneri-circuit_trace {{ stroke-dasharray: 12 16; animation: raulveneri-flow 4.6s ease-out 1; }}
- .raulveneri-panel_reveal {{ animation: raulveneri-reveal 1s ease-out 1 backwards; }}
- @keyframes raulveneri-flow {{ from {{stroke-dashoffset: 224;}} to {{stroke-dashoffset: 0;}} }}
- @keyframes raulveneri-reveal {{ from {{transform: translateY(7px);}} to {{transform: translateY(0);}} }}
- @media (prefers-reduced-motion: reduce) {{ *, *::before, *::after {{ animation: none !important; transition: none !important; }} }}
-</style>
-<rect x="{inset}" y="{inset}" width="{width-2*inset}" height="{height-2*inset}" rx="24" fill="url(#{prefix}_background)" stroke="#344b65"/>
-<rect x="{inset+1}" y="{inset+1}" width="{width-2*inset-2}" height="{height-2*inset-2}" rx="23" fill="url(#{prefix}_grid)"/>
+<desc id="{prefix}_description">{escape(title)} {description}</desc>
+<defs>{defs}</defs>
+<style>{BASE}{'' if static else MOTION}{REDUCED}</style>
+<rect width="{width}" height="{height}" rx="{16 if dark else 0}" fill="{bg}"/>
 {body}
 </svg>
 '''
-    (ASSETS / f"raulveneri-{name}.svg").write_text(svg, encoding="utf-8")
+    (ASSETS / f'raulveneri-{name}{suffix}.svg').write_text(svg, encoding='utf-8')
 
 
-def circuit(cx, cy, scale=1):
-    return f'''<g transform="translate({cx} {cy}) scale({scale})" fill="none" stroke="#58748f" stroke-width="2">
- <circle r="113" stroke-dasharray="3 12"/><circle r="83" stroke="#344b65"/>
- <path d="M-150-58H-88L-48-18M150 58H88L48 18M-150 58H-88L-48 18M150-58H88L48-18M0-145V-49M0 145V49"/>
- <path class="raulveneri-circuit_trace" d="M-150-58H-88L-48-18M150 58H88L48 18M0-145V-49" stroke="{CYAN}" stroke-width="3"/>
- <path d="M-48-28L0-56 48-28V28L0 56-48 28Z" fill="#102b38" stroke="{CYAN}"/>
- <path d="M-24-10L-37 0-24 10M24-10L37 0 24 10M9-21L-9 21" stroke="{CYAN}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
- <g fill="#111f30" stroke="{CYAN}"><circle cx="-150" cy="-58" r="7"/><circle cx="150" cy="58" r="7"/><circle cy="-145" r="7"/></g>
- <g fill="#111f30" stroke="{AMBER}"><circle cx="150" cy="-58" r="7"/><circle cx="-150" cy="58" r="7"/><circle cy="145" r="7"/></g>
- </g>'''
+def hero(mobile=False, static=False):
+    w, h = (640, 350) if mobile else (1200, 360)
+    x = 36 if mobile else 52
+    body = text(x, 100 if mobile else 127, 'Marketing, código', 58 if mobile else 91, weight=700, extra='letter-spacing="-2"')
+    body += text(x, 180 if mobile else 237, 'y agentes de IA.', 66 if mobile else 100, extra='class="raulveneri-serif"')
+    body += f'<path class="raulveneri-heading_underline" d="M52 {214 if mobile else 271}H{595 if mobile else 1098}" stroke="{ACCENT}" stroke-width="4"/>'
+    body += text(x, 296 if mobile else 328, 'SEO / GOOGLE ADS / AUTOMATIZACIÓN', 23 if mobile else 22, MUTED, extra='letter-spacing="1"')
+    document('profile-heading', w, h, 'Marketing, código y agentes de IA.', body, mobile, static)
 
 
-def hero(mobile=False):
-    width, height = (640, 580) if mobile else (1200, 400)
-    body = text(40 if mobile else 56, 82 if mobile else 112, "Marketing, código", 52 if mobile else 72, weight=700)
-    body += text(40 if mobile else 56, 148 if mobile else 198, "y agentes IA.", 52 if mobile else 72, CYAN, 700)
-    body += text(40 if mobile else 60, 205 if mobile else 260, "Mi laboratorio digital.", 29 if mobile else 28, MUTED)
-    body += circuit(320 if mobile else 967, 387 if mobile else 192, .81 if mobile else .91)
-    body += text(40 if mobile else 60, 544 if mobile else 350, "Construyo. Compruebo. Itero.", 27 if mobile else 24, AMBER, 500)
-    document("digital-laboratory" + ("--mobile" if mobile else ""), width, height, "Marketing, código y agentes IA. Mi laboratorio digital.", body)
-
-
-def toolkit(mobile=False):
-    width, height = (640, 650) if mobile else (1200, 420)
-    body = text(40 if mobile else 56, 93 if mobile else 104, "SEO Kit", 66, weight=700)
-    body += text(40 if mobile else 58, 145 if mobile else 162, "Del análisis a la comprobación.", 28 if mobile else 27, MUTED)
-    body += text(40 if mobile else 58, 194 if mobile else 222, "Flujos y agentes para SEO y GEO.", 28 if mobile else 26, MUTED)
-    body += text(40 if mobile else 58, 240 if mobile else 286, "Claude Code · Codex · OpenCode", 25 if mobile else 22, CYAN)
-    nodes = [(40, 300), (340, 300), (40, 436), (340, 436)] if mobile else [(660, 68), (922, 68), (660, 220), (922, 220)]
-    path = "M170 352H470V488H170V352" if mobile else "M774 125H1036V277H774V125"
-    body += f'<path d="{path}" fill="none" stroke="#58748f" stroke-width="2"/><path d="{path}" class="raulveneri-circuit_trace" fill="none" stroke="{CYAN}" stroke-width="3"/>'
-    labels = [("01", "Analizar"), ("02", "Decidir"), ("04", "Verificar"), ("03", "Construir")]
-    for i, ((x, y), (number, label)) in enumerate(zip(nodes, labels)):
-        body += f'<g class="raulveneri-panel_reveal" style="animation-delay:{i*.2}s"><rect x="{x}" y="{y}" width="228" height="112" rx="14" fill="#122338" stroke="#58748f"/>'
-        body += text(x+20, y+36, number, 20, AMBER, 600)
-        body += text(x+20, y+79, label, 31, weight=600) + '</g>'
-    body += text(40 if mobile else 58, 606 if mobile else 367, "Repositorio público en GitHub ↗", 26 if mobile else 23, CYAN, 500)
-    document("search-optimization-toolkit" + ("--mobile" if mobile else ""), width, height, "SEO Kit: analizar, decidir, construir y verificar.", body)
-
-
-def website(robotics=False):
-    if robotics:
-        body = '<g fill="none" stroke="#72ede2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M550 244H720M635 244V221M635 120V88M600 156V187M670 156V187"/><rect x="568" y="120" width="134" height="100" rx="24" fill="#102b38"/><circle cx="635" cy="81" r="7" fill="#ffd28a"/><path d="M592 120L576 104M678 120L694 104M580 244V260M690 244V260" stroke="#ffd28a"/></g>'
-        body += text(42, 330, "Roboticz Lab", 61, weight=700)
-        body += text(44, 391, "Robótica con IA.", 32, MUTED)
-        body += text(44, 438, "Noticias y proyectos para montar.", 31, MUTED)
-        name, title = "robotics-publication", "Roboticz Lab. Robótica con IA, noticias y guías de montaje."
+def toolkit(mobile=False, static=False):
+    w, h = (640, 810) if mobile else (1200, 560)
+    x = 36 if mobile else 52
+    body = text(x, 96 if mobile else 120, 'SEO Kit', 74 if mobile else 94, weight=700, extra='letter-spacing="-3"')
+    body += text(x, 157 if mobile else 213, 'Analiza tu web.', 37 if mobile else 40)
+    body += text(x, 206 if mobile else 271, 'Entiende qué falla.', 37 if mobile else 40)
+    body += text(x, 255 if mobile else 329, 'Decide qué cambiar.', 37 if mobile else 40, ACCENT, 600)
+    if mobile:
+        body += '<path d="M36 298H604" stroke="#c9c2b8"/>'
+        px, py = 36, 354
     else:
-        body = '<g fill="none" stroke="#72ede2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="535" y="80" width="205" height="165" rx="16" fill="#102b38"/><path d="M535 119H740M561 145H603M561 168H620M647 208L672 180 696 191 719 151"/><path d="M705 151H719V166" stroke="#ffd28a"/></g>'
-        body += text(42, 330, "raulveneri.com", 59, weight=700)
-        body += text(44, 391, "Marketing con IA.", 32, MUTED)
-        body += text(44, 438, "Mi web también es mi laboratorio.", 31, MUTED)
-        name, title = "personal-website", "Raúl Veneri. Marketing con IA y mi web como laboratorio."
-    body += text(44, 546, "Abrir la web ↗", 30, CYAN, 500)
-    document(name, 810, 600, title, body, inset=16)
+        body += '<path d="M604 52V444" stroke="#c9c2b8"/>'
+        px, py = 650, 90
+    body += text(px, py, 'EJEMPLO DOCUMENTADO · WEB LOCAL', 21 if mobile else 17, MUTED)
+    stages = [
+        ('request', '01 / LA PETICIÓN', ['Auditar dos páginas.', 'Revisar técnica y contenido.'], ['Análisis de HTML compilado.', 'Sin modificar la web.']),
+        ('finding', '02 / EL HALLAZGO', ['Un enlace está roto.', '/about/ → /missing/'], ['La página de destino no existe.', 'El informe indica dónde ocurre.']),
+        ('decision', '03 / QUÉ HACER', ['Corregir el enlace', 'o recuperar la página.'], ['La opción depende del proyecto.', 'Tú decides qué tiene sentido.']),
+    ]
+    for kind, label, lines, detail in stages:
+        body += f'<g class="raulveneri-demo_stage raulveneri-demo_stage--{kind}">'
+        body += text(px, py+64, label, 22 if mobile else 19, ACCENT, 600)
+        for i, line in enumerate(lines):
+            body += text(px, py+128+i*47, line, 32 if mobile else 30, weight=600)
+        for i, line in enumerate(detail):
+            body += text(px, py+240+i*37, line, 27 if mobile else 24, MUTED)
+        body += '</g>'
+    body += text(x, h-77, 'Claude Code · Codex · OpenCode', 25 if mobile else 24, MUTED)
+    body += text(x, h-32, 'Quiero ver SEO Kit ↗', 28 if mobile else 26, ACCENT, 600)
+    document('search-optimization-toolkit', w, h, 'SEO Kit: analiza tu web, entiende qué falla y decide qué cambiar. Demostración adaptada del ejemplo documentado.', body, mobile, static)
+
+
+def website(mobile=False, static=False):
+    w, h = (640, 920) if mobile else (1200, 620)
+    x = 36 if mobile else 52
+    body = text(x, 78 if mobile else 106, 'Lo que aprendo,', 47 if mobile else 45, weight=600)
+    body += text(x, 137 if mobile else 168, 'lo explico aquí.', 51 if mobile else 50, extra='class="raulveneri-serif"')
+    body += text(x, 196 if mobile else 238, 'raulveneri.com', 27, ACCENT, 600)
+    if not mobile:
+        body += text(x, 350, 'Guías sobre agentes,', 27, MUTED)
+        body += text(x, 389, 'SEO y herramientas', 27, MUTED)
+        body += text(x, 428, 'que uso en mi trabajo.', 27, MUTED)
+    sx, sy, sw, sh = (24, 246, 592, 580) if mobile else (466, 38, 700, 516)
+    clip = 'raulveneri-guide_viewport' + ('_mobile' if mobile else '')
+    defs = f'<clipPath id="{clip}"><rect x="{sx}" y="{sy}" width="{sw}" height="{sh}" rx="4"/></clipPath>'
+    source = ASSETS / 'sources' / ('raulveneri-guide-mobile.png' if mobile else 'raulveneri-guide-desktop.png')
+    data = b64encode(source.read_bytes()).decode('ascii')
+    image_height = sw*1440/(600 if mobile else 1100)
+    body += f'<g clip-path="url(#{clip})"><g class="raulveneri-guide_scroll"><image x="{sx}" y="{sy}" width="{sw}" height="{image_height}" href="data:image/png;base64,{data}"/></g></g>'
+    body += f'<rect x="{sx}" y="{sy}" width="{sw}" height="{sh}" rx="4" fill="none" stroke="#b8afa2"/>'
+    body += text(x, h-35, 'Quiero leer las guías ↗', 28 if mobile else 26, ACCENT, 600)
+    document('personal-website', w, h, 'Mi web: captura real de la guía Google Analytics en Claude Code. Quiero leer las guías.', body, mobile, static, defs=defs)
 
 
 def mark(kind, x, y, color, size=1):
@@ -106,33 +147,33 @@ def mark(kind, x, y, color, size=1):
     return f'<g transform="translate({x} {y}) scale({size})" fill="{color}">{shapes[kind]}</g>'
 
 
-def stack(mobile=False):
+
+def stack(mobile=False, static=False):
     width, height = (640, 480) if mobile else (1200, 264)
     cols = 2 if mobile else 3
     cardw, cardh = (282, 128) if mobile else (368, 100)
     margin, gap = (26, 24) if mobile else (24, 24)
-    names = ["Python", "JavaScript", "TypeScript", "Astro", "Tailwind CSS", "Cloudflare"]
-    colors = [AMBER, "#f3df75", "#83baff", "#f8a8d3", CYAN, "#ffbc79"]
-    body = ""
-    for i, (name, color) in enumerate(zip(names, colors)):
+    names = ['Python', 'JavaScript', 'TypeScript', 'Astro', 'Tailwind CSS', 'Cloudflare']
+    colors = [AMBER, '#f3df75', '#83baff', '#f8a8d3', CYAN, '#ffbc79']
+    gestures = ['python', 'javascript', 'typescript', 'astro', 'tailwind', 'cloudflare']
+    body = ''
+    for i, (name, color, gesture) in enumerate(zip(names, colors, gestures)):
         x, y = margin+(i % cols)*(cardw+gap), 26+(i//cols)*(cardh+22)
-        body += f'<g class="raulveneri-panel_reveal" style="animation-delay:{i*.12}s"><rect x="{x}" y="{y}" width="{cardw}" height="{cardh}" rx="16" fill="#102034" stroke="#58748f"/>'
-        body += mark(name, x+cardw/2 if mobile else x+54, y+40 if mobile else y+50, color, .7 if mobile else .85)
-        body += text(x+cardw/2 if mobile else x+105, y+98 if mobile else y+60, name, 30 if mobile else 28, weight=600, extra='text-anchor="middle"' if mobile else "")
-        body += f'<path class="raulveneri-circuit_trace" d="M{x+18} {y+cardh}H{x+cardw-18}" fill="none" stroke="{color}" stroke-width="2"/></g>'
-    document("development-stack" + ("--mobile" if mobile else ""), width, height, "Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.", body)
+        body += f'<rect x="{x}" y="{y}" width="{cardw}" height="{cardh}" rx="12" fill="#1d2838" stroke="#496078"/>'
+        body += f'<g class="raulveneri-stack_gesture raulveneri-stack_gesture--{gesture}">'
+        body += mark(name, x+cardw/2 if mobile else x+54, y+40 if mobile else y+50, color, .7 if mobile else .85) + '</g>'
+        body += text(x+cardw/2 if mobile else x+105, y+98 if mobile else y+60, name, 30 if mobile else 28, '#f1f5f9', 600, extra='text-anchor="middle"' if mobile else '')
+    document('development-stack', width, height, 'Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio.', body, mobile, static, dark=True)
 
 
 def main():
     ASSETS.mkdir(exist_ok=True)
     for mobile in (False, True):
-        hero(mobile)
-        toolkit(mobile)
-        stack(mobile)
-    website()
-    website(True)
-    print(f"Generated 8 original SVG assets in {ASSETS}")
+        for static in (False, True):
+            for build in (hero, toolkit, website, stack):
+                build(mobile, static)
+    print(f'Generated 16 SVG assets in {ASSETS}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -3,14 +3,19 @@
 - Owner: Raúl Veneri, https://github.com/raulveneri.
 - Target: public profile README in `raulveneri/raulveneri`.
 - Language: Spanish, practical first-person copy following the owner's Voice Kit.
-- Approved design: digital laboratory, navy surfaces, cyan and amber, original SVGs.
-- Public projects: SEO Kit repository, raulveneri.com website and Roboticz Lab website. Link to the public sites, never their private source repositories.
+- Approved design: editorial typography, warm paper, near-black and a rust-red accent. No grids, decorative circuits, gradients or generated illustrations. Preserve the dark development-stack cards.
+- Public projects: SEO Kit repository and raulveneri.com website. Publish no other project association or private source repository.
+- Approved introduction: Marketing, código y agentes de IA. No career-origin anecdote or humor in this profile.
+- SEO Kit: Mi herramienta de SEO. La uso en mi día a día y la voy actualizando.
+- SEO Kit demonstration: clearly labeled, translated adaptation of the repository's documented two-page local audit. The broken destination is real demonstration evidence. Repair alternatives are explanatory, not a verbatim agent transcript or a current website audit.
 - Do not invent performance figures, clients or statistics.
 - Keep identity, descriptions, technology names and links in readable Markdown too.
 - GitHub owns page metadata, navigation and contribution activity. No page scripts or structured-data scripts in the README.
 - Assets have no external APIs, packages or scheduled workflows.
-- Regenerate: `python3 .agents/scripts/generate_profile_assets.py`.
+- Regenerate: `python3 .agents/scripts/generate_profile_assets.py`. Uses the committed public website captures under assets/sources; no network or dependencies.
+- Recapture the public guide with `.agents/scripts/capture_website.cjs` and an existing Playwright/Chromium installation; PLAYWRIGHT_MODULE and CHROMIUM_EXECUTABLE may point to those installed tools. Do not install tools automatically.
 - Validate: `python3 .agents/scripts/validate_profile.py`.
-- Animations settle within five seconds and honor reduced motion. Mobile artwork uses picture sources.
-- Do not set an HTML height on picture fallback images: GitHub otherwise preserves fixed height when width shrinks. Use each selected SVG's intrinsic width, height and viewBox ratio. Standalone cards retain both HTML dimensions.
+- Animations use 12-second cycles, with 14 seconds for the real guide scroll. Each animated block lives in an initially open native details element so readers can hide movement. A separate initially closed gallery supplies static alternatives.
+- All animated SVGs honor reduced motion. Picture sources select static assets first for reduced motion, including a separate compact source through 1023px to account for the GitHub sidebar. Static demo artwork shows the decision stage; all context is also available in Markdown and linked documentation.
+- Do not set an HTML height on picture fallback images: GitHub otherwise preserves fixed height when width shrinks. Use each selected SVG's intrinsic width, height and viewBox ratio.
 - Local previews and review evidence live under `audits/` and `proposals/`.
