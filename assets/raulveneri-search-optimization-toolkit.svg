@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="raulveneri-search_optimization_toolkit_title raulveneri-search_optimization_toolkit_description">
+<title id="raulveneri-search_optimization_toolkit_title">SEO Kit: analizar, decidir, construir y verificar.</title>
+<desc id="raulveneri-search_optimization_toolkit_description">SEO Kit: analizar, decidir, construir y verificar. Ilustración original. Las animaciones terminan antes de cinco segundos.</desc>
+<defs>
+ <linearGradient id="raulveneri-search_optimization_toolkit_background" x2="1" y2="1"><stop stop-color="#101e30"/><stop offset="1" stop-color="#080f1b"/></linearGradient>
+ <pattern id="raulveneri-search_optimization_toolkit_grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#23364d" stroke-opacity=".45"/></pattern>
+</defs>
+<style>
+ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+ .raulveneri-circuit_trace { stroke-dasharray: 12 16; animation: raulveneri-flow 4.6s ease-out 1; }
+ .raulveneri-panel_reveal { animation: raulveneri-reveal 1s ease-out 1 backwards; }
+ @keyframes raulveneri-flow { from {stroke-dashoffset: 224;} to {stroke-dashoffset: 0;} }
+ @keyframes raulveneri-reveal { from {transform: translateY(7px);} to {transform: translateY(0);} }
+ @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+<rect x="1" y="1" width="1198" height="418" rx="24" fill="url(#raulveneri-search_optimization_toolkit_background)" stroke="#344b65"/>
+<rect x="2" y="2" width="1196" height="416" rx="23" fill="url(#raulveneri-search_optimization_toolkit_grid)"/>
+<text x="56" y="104" font-size="66" fill="#f1f5f9" font-weight="700" >SEO Kit</text><text x="58" y="162" font-size="27" fill="#b7c8d9" font-weight="400" >Del análisis a la comprobación.</text><text x="58" y="222" font-size="26" fill="#b7c8d9" font-weight="400" >Flujos y agentes para SEO y GEO.</text><text x="58" y="286" font-size="22" fill="#72ede2" font-weight="400" >Claude Code · Codex · OpenCode</text><path d="M774 125H1036V277H774V125" fill="none" stroke="#58748f" stroke-width="2"/><path d="M774 125H1036V277H774V125" class="raulveneri-circuit_trace" fill="none" stroke="#72ede2" stroke-width="3"/><g class="raulveneri-panel_reveal" style="animation-delay:0.0s"><rect x="660" y="68" width="228" height="112" rx="14" fill="#122338" stroke="#58748f"/><text x="680" y="104" font-size="20" fill="#ffd28a" font-weight="600" >01</text><text x="680" y="147" font-size="31" fill="#f1f5f9" font-weight="600" >Analizar</text></g><g class="raulveneri-panel_reveal" style="animation-delay:0.2s"><rect x="922" y="68" width="228" height="112" rx="14" fill="#122338" stroke="#58748f"/><text x="942" y="104" font-size="20" fill="#ffd28a" font-weight="600" >02</text><text x="942" y="147" font-size="31" fill="#f1f5f9" font-weight="600" >Decidir</text></g><g class="raulveneri-panel_reveal" style="animation-delay:0.4s"><rect x="660" y="220" width="228" height="112" rx="14" fill="#122338" stroke="#58748f"/><text x="680" y="256" font-size="20" fill="#ffd28a" font-weight="600" >04</text><text x="680" y="299" font-size="31" fill="#f1f5f9" font-weight="600" >Verificar</text></g><g class="raulveneri-panel_reveal" style="animation-delay:0.6000000000000001s"><rect x="922" y="220" width="228" height="112" rx="14" fill="#122338" stroke="#58748f"/><text x="942" y="256" font-size="20" fill="#ffd28a" font-weight="600" >03</text><text x="942" y="299" font-size="31" fill="#f1f5f9" font-weight="600" >Construir</text></g><text x="58" y="367" font-size="23" fill="#72ede2" font-weight="500" >Repositorio público en GitHub ↗</text>
+</svg>
