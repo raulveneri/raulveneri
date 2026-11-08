@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
 SVG = '{http://www.w3.org/2000/svg}'
-NAMES = ('profile-heading', 'search-optimization-toolkit', 'personal-website', 'development-stack')
+NAMES = ('profile-heading', 'seo-kit-demonstration', 'website-guides', 'development-tools')
 
 
 class ProfileHTML(HTMLParser):
@@ -92,12 +92,12 @@ def main():
         assert ('infinite' not in source) if static else ('prefers-reduced-motion: no-preference' in source)
         assert not re.search(r'(?:href=|url\()[\"\']?https?://', source)
         assert not any(word in source for word in ('linearGradient', '<pattern', 'circuit_trace'))
-        assert path.stat().st_size < (500_000 if 'personal-website' in relative else 15_000)
+        assert path.stat().st_size < (500_000 if 'website-guides' in relative else 15_000)
         for element in root.iter():
             assert element.tag not in {SVG+'script', SVG+'foreignObject'}
             assert not any(k.startswith('on') for k in element.attrib)
             if element.tag == SVG+'image':
-                assert 'personal-website' in relative
+                assert 'website-guides' in relative
                 value = element.get('href', '')
                 assert value.startswith('data:image/png;base64,')
                 data = b64decode(value.split(',', 1)[1], validate=True)

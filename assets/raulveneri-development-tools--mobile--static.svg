@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="raulveneri-development_stack__mobile_title raulveneri-development_stack__mobile_description">
-<title id="raulveneri-development_stack__mobile_title">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio.</title>
-<desc id="raulveneri-development_stack__mobile_description">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio. Animación con pausas de lectura. Respeta la preferencia de movimiento reducido.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="raulveneri-development_tools__mobile__static_title raulveneri-development_tools__mobile__static_description">
+<title id="raulveneri-development_tools__mobile__static_title">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio.</title>
+<desc id="raulveneri-development_tools__mobile__static_description">Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio. Versión estática.</desc>
 <defs></defs>
 <style>
 text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
@@ -8,31 +8,6 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
 .raulveneri-monospace { font-family: 'DejaVu Sans Mono', Consolas, monospace; }
 .raulveneri-demo_stage { opacity: 0; }
 .raulveneri-demo_stage--decision { opacity: 1; }
-
-@media (prefers-reduced-motion: no-preference) {
- .raulveneri-heading_underline { animation: raulveneri-underline 12s ease-in-out infinite; transform-origin: 52px 0; }
- .raulveneri-demo_stage--request { animation: raulveneri-request 12s linear infinite; }
- .raulveneri-demo_stage--finding { animation: raulveneri-finding 12s linear infinite; }
- .raulveneri-demo_stage--decision { animation: raulveneri-decision 12s linear infinite; }
- .raulveneri-guide_scroll { animation: raulveneri-scroll 14s ease-in-out infinite; }
- .raulveneri-stack_gesture { transform-box: fill-box; transform-origin: center; }
- .raulveneri-stack_gesture--python { animation: raulveneri-orbit 12s ease-in-out infinite; }
- .raulveneri-stack_gesture--javascript { animation: raulveneri-code 12s ease-in-out 2s infinite; }
- .raulveneri-stack_gesture--typescript { animation: raulveneri-code 12s ease-in-out 4s infinite; }
- .raulveneri-stack_gesture--astro { animation: raulveneri-lift 12s ease-in-out 6s infinite; }
- .raulveneri-stack_gesture--tailwind { animation: raulveneri-wave 12s ease-in-out 8s infinite; }
- .raulveneri-stack_gesture--cloudflare { animation: raulveneri-arrive 12s ease-in-out 10s infinite; }
-}
-@keyframes raulveneri-underline { 0%, 8%, 100% { transform: scaleX(.3); } 24%, 82% { transform: scaleX(1); } }
-@keyframes raulveneri-request { 0%, 30% { opacity: 1; } 33%, 96% { opacity: 0; } 100% { opacity: 1; } }
-@keyframes raulveneri-finding { 0%, 30%, 66%, 100% { opacity: 0; } 33%, 63% { opacity: 1; } }
-@keyframes raulveneri-decision { 0%, 63%, 100% { opacity: 0; } 66%, 96% { opacity: 1; } }
-@keyframes raulveneri-scroll { 0%, 18%, 100% { transform: translateY(0); } 55%, 82% { transform: translateY(-280px); } }
-@keyframes raulveneri-orbit { 0%, 3%, 20%, 100% { transform: rotate(0); } 9% { transform: rotate(-12deg); } 14% { transform: rotate(8deg); } }
-@keyframes raulveneri-code { 0%, 3%, 20%, 100% { transform: translateX(0); } 9% { transform: translateX(-5px); } 14% { transform: translateX(5px); } }
-@keyframes raulveneri-lift { 0%, 3%, 20%, 100% { transform: translateY(0); } 10%, 14% { transform: translateY(-9px); } }
-@keyframes raulveneri-wave { 0%, 3%, 20%, 100% { transform: skewX(0); } 9% { transform: skewX(-12deg); } 14% { transform: skewX(9deg); } }
-@keyframes raulveneri-arrive { 0%, 3%, 20%, 100% { transform: translateX(0); } 9% { transform: translateX(-7px); } 14% { transform: translateX(3px); } }
 
 @media (prefers-reduced-motion: reduce) {
  *, *::before, *::after { animation: none !important; transition: none !important; }

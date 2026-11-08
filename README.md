@@ -31,10 +31,10 @@ Cuando una decisión necesita contexto o criterio humano, te presenta opciones y
 
 <a href="https://github.com/raulveneri/seo-kit">
   <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-search-optimization-toolkit--mobile--static.svg">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-search-optimization-toolkit--static.svg">
-    <source media="(max-width: 1023px)" srcset="assets/raulveneri-search-optimization-toolkit--mobile.svg">
-    <img src="assets/raulveneri-search-optimization-toolkit.svg" width="1200" alt="SEO Kit: analiza tu web, entiende qué falla y decide qué cambiar. Ejemplo de auditoría local con un enlace roto. Abrir el repositorio.">
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-seo-kit-demonstration--mobile--static.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-seo-kit-demonstration--static.svg">
+    <source media="(max-width: 1023px)" srcset="assets/raulveneri-seo-kit-demonstration--mobile.svg">
+    <img src="assets/raulveneri-seo-kit-demonstration.svg" width="1200" alt="SEO Kit: analiza tu web, entiende qué falla y decide qué cambiar. Ejemplo de auditoría local con un enlace roto. Abrir el repositorio.">
   </picture>
 </a>
 
@@ -53,10 +53,10 @@ En [raulveneri.com](https://www.raulveneri.com/) comparto guías sobre agentes, 
 
 <a href="https://www.raulveneri.com/guias/">
   <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-personal-website--mobile--static.svg">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-personal-website--static.svg">
-    <source media="(max-width: 1023px)" srcset="assets/raulveneri-personal-website--mobile.svg">
-    <img src="assets/raulveneri-personal-website.svg" width="1200" alt="Captura real de mi guía Google Analytics en Claude Code, en raulveneri.com. Abrir mis guías.">
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-website-guides--mobile--static.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-website-guides--static.svg">
+    <source media="(max-width: 1023px)" srcset="assets/raulveneri-website-guides--mobile.svg">
+    <img src="assets/raulveneri-website-guides.svg" width="1200" alt="Captura real de mi guía Google Analytics en Claude Code, en raulveneri.com. Abrir mis guías.">
   </picture>
 </a>
 
@@ -70,10 +70,10 @@ En [raulveneri.com](https://www.raulveneri.com/) comparto guías sobre agentes, 
 <summary>Las herramientas que uso</summary>
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-development-stack--mobile--static.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-development-stack--static.svg">
-  <source media="(max-width: 1023px)" srcset="assets/raulveneri-development-stack--mobile.svg">
-  <img src="assets/raulveneri-development-stack.svg" width="1200" alt="Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 1023px)" srcset="assets/raulveneri-development-tools--mobile--static.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/raulveneri-development-tools--static.svg">
+  <source media="(max-width: 1023px)" srcset="assets/raulveneri-development-tools--mobile.svg">
+  <img src="assets/raulveneri-development-tools.svg" width="1200" alt="Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
 </picture>
 
 </details>
@@ -94,21 +94,21 @@ Puedes cerrar cada bloque desde su título para ocultar el movimiento. Si prefie
 
 <a href="https://github.com/raulveneri/seo-kit">
   <picture>
-    <source media="(max-width: 1023px)" srcset="assets/raulveneri-search-optimization-toolkit--mobile--static.svg">
-    <img src="assets/raulveneri-search-optimization-toolkit--static.svg" width="1200" alt="SEO Kit, versión estática: analiza tu web, entiende qué falla y decide qué cambiar.">
+    <source media="(max-width: 1023px)" srcset="assets/raulveneri-seo-kit-demonstration--mobile--static.svg">
+    <img src="assets/raulveneri-seo-kit-demonstration--static.svg" width="1200" alt="SEO Kit, versión estática: analiza tu web, entiende qué falla y decide qué cambiar.">
   </picture>
 </a>
 
 <a href="https://www.raulveneri.com/guias/">
   <picture>
-    <source media="(max-width: 1023px)" srcset="assets/raulveneri-personal-website--mobile--static.svg">
-    <img src="assets/raulveneri-personal-website--static.svg" width="1200" alt="Captura estática de mi guía Google Analytics en Claude Code.">
+    <source media="(max-width: 1023px)" srcset="assets/raulveneri-website-guides--mobile--static.svg">
+    <img src="assets/raulveneri-website-guides--static.svg" width="1200" alt="Captura estática de mi guía Google Analytics en Claude Code.">
   </picture>
 </a>
 
 <picture>
-  <source media="(max-width: 1023px)" srcset="assets/raulveneri-development-stack--mobile--static.svg">
-  <img src="assets/raulveneri-development-stack--static.svg" width="1200" alt="Stack sin movimiento: Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
+  <source media="(max-width: 1023px)" srcset="assets/raulveneri-development-tools--mobile--static.svg">
+  <img src="assets/raulveneri-development-tools--static.svg" width="1200" alt="Stack sin movimiento: Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare.">
 </picture>
 
 </details>

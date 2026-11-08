@@ -110,7 +110,7 @@ def toolkit(mobile=False, static=False):
         body += '</g>'
     body += text(x, h-77, 'Claude Code · Codex · OpenCode', 25 if mobile else 24, MUTED)
     body += text(x, h-32, 'Quiero ver SEO Kit ↗', 28 if mobile else 26, ACCENT, 600)
-    document('search-optimization-toolkit', w, h, 'SEO Kit: analiza tu web, entiende qué falla y decide qué cambiar. Demostración adaptada del ejemplo documentado.', body, mobile, static)
+    document('seo-kit-demonstration', w, h, 'SEO Kit: analiza tu web, entiende qué falla y decide qué cambiar. Demostración adaptada del ejemplo documentado.', body, mobile, static)
 
 
 def website(mobile=False, static=False):
@@ -132,7 +132,7 @@ def website(mobile=False, static=False):
     body += f'<g clip-path="url(#{clip})"><g class="raulveneri-guide_scroll"><image x="{sx}" y="{sy}" width="{sw}" height="{image_height}" href="data:image/png;base64,{data}"/></g></g>'
     body += f'<rect x="{sx}" y="{sy}" width="{sw}" height="{sh}" rx="4" fill="none" stroke="#b8afa2"/>'
     body += text(x, h-35, 'Quiero leer las guías ↗', 28 if mobile else 26, ACCENT, 600)
-    document('personal-website', w, h, 'Mi web: captura real de la guía Google Analytics en Claude Code. Quiero leer las guías.', body, mobile, static, defs=defs)
+    document('website-guides', w, h, 'Mi web: captura real de la guía Google Analytics en Claude Code. Quiero leer las guías.', body, mobile, static, defs=defs)
 
 
 def mark(kind, x, y, color, size=1):
@@ -163,7 +163,7 @@ def stack(mobile=False, static=False):
         body += f'<g class="raulveneri-stack_gesture raulveneri-stack_gesture--{gesture}">'
         body += mark(name, x+cardw/2 if mobile else x+54, y+40 if mobile else y+50, color, .7 if mobile else .85) + '</g>'
         body += text(x+cardw/2 if mobile else x+105, y+98 if mobile else y+60, name, 30 if mobile else 28, '#f1f5f9', 600, extra='text-anchor="middle"' if mobile else '')
-    document('development-stack', width, height, 'Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio.', body, mobile, static, dark=True)
+    document('development-tools', width, height, 'Python, JavaScript, TypeScript, Astro, Tailwind CSS y Cloudflare. Cada símbolo tiene un movimiento propio.', body, mobile, static, dark=True)
 
 
 def main():
