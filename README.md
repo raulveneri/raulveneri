@@ -50,9 +50,13 @@ License: SEO Kit Free Use License 1.0. [View the repository](https://github.com/
 
 <img src="assets/en/lenguajes.svg" alt="Code by language: Python 73%, JavaScript 27%." width="100%">
 
+Language percentages use code size in owned public repositories, excluding forks. Updated daily.
+
 <img src="assets/en/h-05.svg" alt="Activity" width="100%">
 
-<img src="assets/en/actividad.svg" alt="Commit activity: 18 commits across 2 repositories, data as of Nov 8, 2026. Oct 20, 4; Oct 21, 5; Nov 8, 9." width="100%">
+<img src="assets/en/actividad.svg" alt="Commit activity: 19 commits in 30 days · 2 public repositories · through Nov 8, 2026 UTC. Oct 10, 0; Oct 11, 0; Oct 12, 0; Oct 13, 0; Oct 14, 0; Oct 15, 0; Oct 16, 0; Oct 17, 0; Oct 18, 0; Oct 19, 0; Oct 20, 4; Oct 21, 5; Oct 22, 0; Oct 23, 0; Oct 24, 0; Oct 25, 0; Oct 26, 0; Oct 27, 0; Oct 28, 0; Oct 29, 0; Oct 30, 0; Oct 31, 0; Nov 1, 0; Nov 2, 0; Nov 3, 0; Nov 4, 0; Nov 5, 0; Nov 6, 0; Nov 7, 0; Nov 8, 10." width="100%">
+
+Commits authored by me on each repository’s default branch during the last 30 UTC days. Updated daily.
 
 <img src="assets/en/h-06.svg" alt="Tools" width="100%">
 

@@ -1,0 +1,25 @@
+{
+  "fecha": "2026-11-08",
+  "repos": {
+    "raulveneri": {
+      "languages": {
+        "Python": 18379,
+        "JavaScript": 1708
+      },
+      "commits": {
+        "2026-11-08": 5,
+        "2026-10-20": 4
+      }
+    },
+    "seo-kit": {
+      "languages": {
+        "Python": 313796,
+        "JavaScript": 121564
+      },
+      "commits": {
+        "2026-11-08": 5,
+        "2026-10-21": 5
+      }
+    }
+  }
+}
