@@ -3,11 +3,11 @@
   "repos": {
     "raulveneri": {
       "languages": {
-        "Python": 18379,
-        "JavaScript": 1708
+        "JavaScript": 28150,
+        "Python": 18379
       },
       "commits": {
-        "2026-11-08": 5,
+        "2026-11-08": 6,
         "2026-10-20": 4
       }
     },
