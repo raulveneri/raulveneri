@@ -54,7 +54,7 @@ Los porcentajes reflejan el tamaño del código en repositorios públicos propio
 
 <img src="assets/es/h-05.svg" alt="Actividad" width="100%">
 
-<img src="assets/es/actividad.svg" alt="Actividad de commits: 21 commits en 30 días · 2 repositorios públicos · hasta 10 nov 2026 UTC. 12 oct, 0; 13 oct, 0; 14 oct, 0; 15 oct, 0; 16 oct, 0; 17 oct, 0; 18 oct, 0; 19 oct, 0; 20 oct, 4; 21 oct, 5; 22 oct, 0; 23 oct, 0; 24 oct, 0; 25 oct, 0; 26 oct, 0; 27 oct, 0; 28 oct, 0; 29 oct, 0; 30 oct, 0; 31 oct, 0; 1 nov, 0; 2 nov, 0; 3 nov, 0; 4 nov, 0; 5 nov, 0; 6 nov, 0; 7 nov, 0; 8 nov, 12; 9 nov, 0; 10 nov, 0." width="100%">
+<img src="assets/es/actividad.svg" alt="Actividad de commits: 21 commits en 30 días · 2 repositorios públicos · hasta 11 nov 2026 UTC. 13 oct, 0; 14 oct, 0; 15 oct, 0; 16 oct, 0; 17 oct, 0; 18 oct, 0; 19 oct, 0; 20 oct, 4; 21 oct, 5; 22 oct, 0; 23 oct, 0; 24 oct, 0; 25 oct, 0; 26 oct, 0; 27 oct, 0; 28 oct, 0; 29 oct, 0; 30 oct, 0; 31 oct, 0; 1 nov, 0; 2 nov, 0; 3 nov, 0; 4 nov, 0; 5 nov, 0; 6 nov, 0; 7 nov, 0; 8 nov, 12; 9 nov, 0; 10 nov, 0; 11 nov, 0." width="100%">
 
 Commits de mi autoría en la rama predeterminada de cada repositorio durante los últimos 30 días UTC. Actualización diaria.
 
