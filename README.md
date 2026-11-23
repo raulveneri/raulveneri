@@ -54,7 +54,7 @@ Language percentages use code size in owned public repositories, excluding forks
 
 <img src="assets/en/h-05.svg" alt="Activity" width="100%">
 
-<img src="assets/en/actividad.svg" alt="Commit activity: 12 commits in 30 days · 2 public repositories · through Nov 22, 2026 UTC. Oct 24, 0; Oct 25, 0; Oct 26, 0; Oct 27, 0; Oct 28, 0; Oct 29, 0; Oct 30, 0; Oct 31, 0; Nov 1, 0; Nov 2, 0; Nov 3, 0; Nov 4, 0; Nov 5, 0; Nov 6, 0; Nov 7, 0; Nov 8, 12; Nov 9, 0; Nov 10, 0; Nov 11, 0; Nov 12, 0; Nov 13, 0; Nov 14, 0; Nov 15, 0; Nov 16, 0; Nov 17, 0; Nov 18, 0; Nov 19, 0; Nov 20, 0; Nov 21, 0; Nov 22, 0." width="100%">
+<img src="assets/en/actividad.svg" alt="Commit activity: 12 commits in 30 days · 2 public repositories · through Nov 23, 2026 UTC. Oct 25, 0; Oct 26, 0; Oct 27, 0; Oct 28, 0; Oct 29, 0; Oct 30, 0; Oct 31, 0; Nov 1, 0; Nov 2, 0; Nov 3, 0; Nov 4, 0; Nov 5, 0; Nov 6, 0; Nov 7, 0; Nov 8, 12; Nov 9, 0; Nov 10, 0; Nov 11, 0; Nov 12, 0; Nov 13, 0; Nov 14, 0; Nov 15, 0; Nov 16, 0; Nov 17, 0; Nov 18, 0; Nov 19, 0; Nov 20, 0; Nov 21, 0; Nov 22, 0; Nov 23, 0." width="100%">
 
 Commits authored by me on each repository’s default branch during the last 30 UTC days. Updated daily.
 
